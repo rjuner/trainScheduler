@@ -5,6 +5,7 @@ var dataRef = new Firebase("https://snowp.firebaseio.com/");
 var trainName = '';
 var destination = '' ;
 var frequency = '';
+var firstTime = '';
 var nextArrival = 0;
 var minAway = 0;
 
@@ -30,7 +31,6 @@ $('#submit').on('click', function(){
 
 });
 
-
 dataRef.on("child_added", function(childSnapshot){
 
 	$("#dataBox").append("<tr class='well'>" + "<td id='trainName'>" + childSnapshot.val().trainName + "</td>" + "<td id='destination'>" + childSnapshot.val().destination + "</td>" + "<td id='frequency'>" + 
@@ -40,6 +40,15 @@ dataRef.on("child_added", function(childSnapshot){
 	function(errorObject){
 
 });
+
+//MOMENT.JS CALCULATIONS
+
+var currentTime = moment();
+
+// puts current time up top 
+$("#test").append(
+	moment(currentTime).format("hh:mm A")
+	);
 
 
 
