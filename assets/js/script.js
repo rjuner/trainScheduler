@@ -33,7 +33,7 @@ $('#submit').on('click', function(){
 	var firstTime = moment(firstTimeInput, "hh:mm");
 	// puts current time up top 
 	$("#test").append(
-	moment(currentTime).format("hh:mm A")
+		moment(currentTime).format("hh:mm A")
 	);
 
 	//so the page does not get refreshed on click of 'submit' button
