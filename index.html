@@ -72,10 +72,10 @@
 		<div class="panel-body">
 
 			<form>			
-				<div class="form-group">
-					<label for="">Train Name</label>
-					<input type="text" class="form-control" id="trainInput" placeholder="Name of Train">
-				</div>
+					<label for="foo">Train Name</label>
+					<div id="error"></div>
+					<input type="text" name="foo" class="form-control" id="trainInput" placeholder="Name of Train" required="required" >
+
 
 				<div class="form-group">
 					<label for="">Destination</label>
@@ -93,7 +93,7 @@
 				</div>
 			
 				
-				<button id="submit" type="button" class="btn btn-primary">Submit</button>
+				<button id="submit" type="submit" class="btn btn-primary">Submit</button>
 
 			</form>
 
